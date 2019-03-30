@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Montserrat:400,500,700');
 @import 'css/bootstrap.min.css';
 @import 'css/animate.css';
-@import 'css/magnific-popup.css';
-@import 'css/owl.carousel.min.css';
-@import 'css/slick.css';
 @import 'css/font-awesome.min.css';
 @import 'css/themify-icons.css';
 @import 'css/ionicons.min.css';
+@import 'css/proyects-cards.css';
+@import 'css/adknowledge-box.css';
+@import 'css/skills-box.css';
 
 * {
     margin: 0;
@@ -283,13 +283,13 @@ p {
 .header_area.sticky .navbar {
     padding: 0;
 }
-
 .profile {
     width: 50%;
     height: 50%;
     margin-left: 120%;
     margin-top: -40%;
 }
+
 /* ---Welcome Area CSS--- */
 .wellcome_area {
     background-image: url(img/bg-img/fondo.jpg);
@@ -299,7 +299,6 @@ p {
     background-position: bottom center;
     background-size: cover;
 }
-
 .wellcome_area:after {
     position: absolute;
     width: 100%;
@@ -310,7 +309,6 @@ p {
     bottom: 0;
     z-index: 2;
 }
-
 .wellcome-heading > h2 {
     font-size: 100px;
     color: #ffffff;
@@ -359,52 +357,13 @@ p {
     margin-right: 10px;
 }
 .single-feature > h5 {
-    font-size: 22px;
+    font-size: 10px;
     color: #5b32b4;
 }
 .single-feature > p {
     margin-top: 15px;
 }
-.adknowledge-content {
-    width:87%;
-    height: 87%;
-}
-/*--- Proyects --*/
-.app_screenshots_slides {
-    padding: 0 6%;
-}
-.app_screenshots_slides .single-shot {
-    opacity: 0.7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-    -webkit-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    transform: scale(0.85)
-}
-.app_screenshots_slides .center .single-shot {
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1)
-}
-.app-screenshots-area .owl-dot {
-    height: 11px;
-    width: 11px;
-    border: 2px solid #a49fba;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 6px;
-    margin-top: 50px;
-}
-.app-screenshots-area .owl-dot.active {
-    background-color: #fb397d;
-    border: transparent;
-}
-.app-screenshots-area .owl-dots {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
+
 button {
     background: transparent;
     border: none !important;
