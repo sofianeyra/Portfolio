@@ -117,14 +117,8 @@ img {
 .card__image--library {
   background-image: url(https://i.ibb.co/RgNNcLS/1-S9-Ch39077-GNmwpqm9l-ZWcw.png);
 }
-.card__image--cipher {
-  background-image: url(https://i.ibb.co/B45vDks/cipher.jpg);
-}
 .card__image--data {
   background-image: url(https://i.ibb.co/dL01JCQ/data.png);
-}
-.card__image--quiz {
-  background-image: url(https://i.ibb.co/pzF9wz5/tri.png);
 }
 .card__title {
   color: black;
