@@ -30,11 +30,11 @@ ul.social-set {
   }
   /* Font Awesome icons */
   a.sociali {
-    width: 60%; 
+    width: 50%; 
     font-size: 2em;
     line-height: 1.2em;
     user-select: none;
-    padding: 5px;
+    padding: 2px;
     margin-right: 10px;
     margin-bottom: 10px !important;
     padding-bottom: 10px !important;
