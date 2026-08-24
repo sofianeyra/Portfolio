@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sofía Neyra | Front End Developer",
-  description: "Portfolio bilingüe de Sofía Neyra, Front End Developer.",
+  title: "Sofia Neyra | Front End Developer",
+  description: "Portfolio bilingüe de Sofia Neyra, Front End Developer.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
