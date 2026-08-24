@@ -47,19 +47,18 @@ body {
 html { scroll-behavior: smooth; }
 ::selection { background: var(--accent-soft); color: var(--foreground); }
 
-@keyframes typewriter-loop {
-  0%, 8% { max-width: 0; }
-  58%, 76% { max-width: 12ch; }
-  92%, 100% { max-width: 0; }
+@keyframes emphasis-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-@keyframes caret-blink {
-  50% { border-color: transparent; }
-}
-
-.typewriter {
-  max-width: 0;
-  animation: typewriter-loop 8s steps(10, end) infinite, caret-blink 900ms step-end infinite;
+.text-gradient-flow {
+  background: linear-gradient(90deg, var(--foreground) 0%, var(--foreground) 28%, var(--accent) 55%, var(--foreground) 82%);
+  background-size: 220% 100%;
+  animation: emphasis-gradient 4.5s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .contact-link { display: flex; align-items: center; gap: .75rem; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem 1.1rem; font-size: .9375rem; transition: transform 220ms ease, background-color 220ms ease; }
 .contact-link:hover { transform: translateY(-2px); background: var(--surface); }
