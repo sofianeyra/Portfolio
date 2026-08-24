@@ -8,7 +8,7 @@ import {
   GithubLogo, LinkedinLogo, List, MapPin, Moon, Phone, Sun, WhatsappLogo, X,
 } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { SiElementor, SiHtml5, SiJavascript, SiPhp, SiSass, SiTypescript, SiWoocommerce, SiWordpress } from "react-icons/si";
+import { SiElementor, SiGit, SiHtml5, SiJavascript, SiPhp, SiSass, SiTypescript, SiWoocommerce, SiWordpress } from "react-icons/si";
 import { featuredProjects, type Locale, type Project } from "@/lib/projects";
 import { ProjectImage } from "@/components/project-image";
 
@@ -53,6 +53,7 @@ const skills = [
   { name: "PHP", Icon: SiPhp, level: 75, category: "cms" },
   { name: "WooCommerce", Icon: SiWoocommerce, level: 70, category: "cms" },
   { name: "Elementor", Icon: SiElementor, level: 70, category: "styling" },
+  { name: "Git", Icon: SiGit, level: 100, category: "frontend" },
 ] as const;
 
 const fadeUp = { hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } };
