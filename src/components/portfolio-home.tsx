@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowDownRight, ArrowUpRight, ArrowUp, Briefcase, EnvelopeSimple, FilePdf,
+  ArrowDownRight, ArrowUpRight, ArrowUp, Briefcase, EnvelopeSimple,
   GithubLogo, LinkedinLogo, MapPin, Moon, Phone, Sun, WhatsappLogo,
 } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
