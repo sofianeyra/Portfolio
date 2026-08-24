@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowDownRight, ArrowUpRight, ArrowUp, Briefcase, EnvelopeSimple,
-  GithubLogo, LinkedinLogo, MapPin, Moon, Phone, Sun, WhatsappLogo,
+  GithubLogo, LinkedinLogo, List, MapPin, Moon, Phone, Sun, WhatsappLogo, X,
 } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { SiElementor, SiHtml5, SiJavascript, SiPhp, SiSass, SiTypescript, SiWoocommerce, SiWordpress } from "react-icons/si";
@@ -90,6 +90,7 @@ function ProjectPreview({ project, index, viewSite }: { project: Project; index:
 export function PortfolioHome() {
   const { locale, setLocale, theme, setTheme } = usePreferences();
   const [skillCategory, setSkillCategory] = useState<SkillCategory>("all");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = copy[locale];
   const skillFilterLabels: Record<SkillCategory, string> = locale === "es"
     ? { all: "Todas", frontend: "Front end", cms: "CMS & e-commerce", styling: "Estilos" }
@@ -97,6 +98,15 @@ export function PortfolioHome() {
   const visibleSkills = skillCategory === "all" ? skills : skills.filter((skill) => skill.category === skillCategory);
   const headlinePrefix = locale === "es" ? "Diseño y desarrollo interfaces web con " : "I design and build web interfaces with ";
   const headlineEmphasis = locale === "es" ? "intención." : "intention.";
+  const mobileLinks = locale === "es"
+    ? [{ href: "#top", label: "Inicio" }, { href: "#profile", label: "Perfil" }, { href: "#profile", label: "Habilidades" }, { href: "#projects", label: "Proyectos" }, { href: "#contact", label: "Contacto" }]
+    : [{ href: "#top", label: "Home" }, { href: "#profile", label: "Profile" }, { href: "#profile", label: "Skills" }, { href: "#projects", label: "Projects" }, { href: "#contact", label: "Contact" }];
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [mobileMenuOpen]);
   return <main className="overflow-hidden">
     <nav className="sticky top-0 z-20 border-b bg-[color:var(--background)]/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 md:px-8">
