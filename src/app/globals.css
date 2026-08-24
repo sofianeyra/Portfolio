@@ -46,6 +46,11 @@ body {
 * { border-color: var(--line); }
 html { scroll-behavior: smooth; }
 ::selection { background: var(--accent-soft); color: var(--foreground); }
+
+@keyframes typing {
+  from { max-width: 0; }
+  to { max-width: 12ch; }
+}
 .contact-link { display: flex; align-items: center; gap: .75rem; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem 1.1rem; font-size: .9375rem; transition: transform 220ms ease, background-color 220ms ease; }
 .contact-link:hover { transform: translateY(-2px); background: var(--surface); }
 .contact-link:active { transform: translateY(1px); }
