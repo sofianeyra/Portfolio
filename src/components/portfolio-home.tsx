@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from "react";
 import { SiElementor, SiHtml5, SiJavascript, SiPhp, SiSass, SiTypescript, SiWoocommerce, SiWordpress } from "react-icons/si";
 import { featuredProjects, type Locale, type Project } from "@/lib/projects";
+import { ProjectImage } from "@/components/project-image";
 
 const copy = {
   es: {
@@ -75,6 +76,7 @@ function ProjectPreview({ project, index, viewSite }: { project: Project; index:
     <a href={project.url} target="_blank" rel="noreferrer" className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
       <div className={`relative aspect-[16/10] overflow-hidden rounded-[2rem] border bg-gradient-to-br ${palettes[index % palettes.length]} p-5 shadow-[0_20px_45px_-30px_rgba(52,38,70,0.4)] transition duration-500 group-hover:-translate-y-1`}>
         <div className="absolute inset-0 transition duration-500 group-hover:scale-105 group-hover:blur-sm"><div className="absolute inset-x-5 top-5 h-7 rounded-full border bg-white/55" /><div className="absolute left-5 top-16 bottom-5 w-[30%] rounded-2xl bg-white/45" /><div className="absolute right-5 top-16 h-[48%] w-[59%] rounded-2xl border border-white/45 bg-white/50" /><div className="absolute bottom-5 right-5 h-[28%] w-[59%] rounded-2xl bg-[var(--foreground)]/10" /></div>
+        <ProjectImage src={project.image} alt={`Captura del proyecto ${project.title}`} priority={index < 2} className="absolute inset-0 object-cover transition duration-500 group-hover:scale-105 group-hover:blur-sm" />
         <div className="absolute inset-0 grid place-items-center bg-[#24212b]/0 opacity-0 transition duration-300 group-hover:bg-[#24212b]/40 group-hover:opacity-100"><span className="rounded-full bg-[var(--surface)] px-5 py-3 text-sm font-medium text-[var(--foreground)] shadow-lg">{viewSite}<ArrowUpRight className="ml-2 inline" size={17} weight="light" /></span></div>
       </div>
       <h3 className="px-1 pt-4 text-xl font-medium tracking-tight">{project.title}</h3>
