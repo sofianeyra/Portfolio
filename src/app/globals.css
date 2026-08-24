@@ -47,9 +47,19 @@ body {
 html { scroll-behavior: smooth; }
 ::selection { background: var(--accent-soft); color: var(--foreground); }
 
-@keyframes typing {
-  from { max-width: 0; }
-  to { max-width: 12ch; }
+@keyframes typewriter-loop {
+  0%, 8% { max-width: 0; }
+  58%, 76% { max-width: 12ch; }
+  92%, 100% { max-width: 0; }
+}
+
+@keyframes caret-blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  max-width: 0;
+  animation: typewriter-loop 8s steps(10, end) infinite, caret-blink 900ms step-end infinite;
 }
 .contact-link { display: flex; align-items: center; gap: .75rem; border: 1px solid var(--line); border-radius: 1rem; padding: 1rem 1.1rem; font-size: .9375rem; transition: transform 220ms ease, background-color 220ms ease; }
 .contact-link:hover { transform: translateY(-2px); background: var(--surface); }
